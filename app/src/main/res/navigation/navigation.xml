@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.wheeler.game.ui.welcome.FragmentWelcome"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentWheeler"
+            app:destination="@id/fragmentWheeler" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWheeler"
+        android:name="com.wheeler.game.ui.wheeler.FragmentWheeler"
+        android:label="FragmentWheeler" >
+        <action
+            android:id="@+id/action_fragmentWheeler_to_fragmentEnd"
+            app:destination="@id/fragmentEnd" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnd"
+        android:name="com.wheeler.game.ui.game_over.FragmentEnd"
+        android:label="FragmentEnd" >
+        <argument
+            android:name="scores"
+            app:argType="integer" />
+    </fragment>
+</navigation>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background03"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="#000000" />
+
+    <ImageView
+        android:id="@+id/foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/characters"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.wheeler.game.core.library.CustomImageButton
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:src="@drawable/machine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/wheelState"
+            android:layout_width="270dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/wheelStateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:text="game over "
+            app:layout_constraintBottom_toBottomOf="@+id/wheelState"
+            app:layout_constraintEnd_toEndOf="@+id/wheelState"
+            app:layout_constraintStart_toStartOf="@+id/wheelState"
+            app:layout_constraintTop_toTopOf="@+id/wheelState" />
+
+        <ImageView
+            android:id="@+id/points"
+            android:layout_width="270dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/text_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wheelState" />
+
+        <TextView
+            android:id="@+id/pointsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points"
+            app:layout_constraintEnd_toEndOf="@+id/points"
+            app:layout_constraintStart_toStartOf="@+id/points"
+            app:layout_constraintTop_toTopOf="@+id/points" />
+
+        <LinearLayout
+            android:id="@+id/ticketsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="62dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/points"
+            app:layout_constraintTop_toBottomOf="@+id/points" />
+
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/text_box01"
+            android:fontFamily="@font/semi_bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ticketsLayout"
+            app:layout_constraintStart_toEndOf="@+id/ticketsLayout"
+            app:layout_constraintTop_toTopOf="@+id/ticketsLayout" />
+
+        <com.wheeler.game.core.library.CustomImageButton
+            android:id="@+id/replay"
+            android:layout_width="240dp"
+            android:layout_height="70dp"
+            android:src="@drawable/replay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticketsLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
